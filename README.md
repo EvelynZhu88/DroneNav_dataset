@@ -43,10 +43,10 @@
 
 > **Demo Video**  
 <p align="center">
-  <img src="docs/media/Drone_visualization.gif" alt="Demo GIF" width="40%">
+  <img src="docs/media/Greenhouse_visual.gif" alt="Demo GIF" width="60%">
 </p>
 <p align="center">
-  <a href="docs/media/Drone_visualization_full.mp4">Watch full MP4</a>
+  <a href="docs/media/Greenhouse_visual.webm">Watch full MP4</a>
 </p>
 
 ### A.2 Canonical Routes (10)
