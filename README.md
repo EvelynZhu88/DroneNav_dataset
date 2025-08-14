@@ -1,11 +1,10 @@
 # AgriNav-Sim2Real: A Multi-Sensor Dataset for Drone/UGV Navigation in Greenhouses (Synthetic + Real)
 
-> **TL;DR:** Sim-to-real greenhouse navigation dataset spanning Unreal/AirSim **(RGB · Depth · Seg · IMU · GPS · LiDAR)**, handheld farm runs **(ZED2i RGB-D, Alvium NIR, IMU; LWIR-capable)**, and **Insta360 360°** context—delivered with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter.
+> **TL;DR:** Sim-to-real greenhouse navigation dataset spanning Unreal/AirSim **(RGB · Depth · Seg · IMU · GPS · LiDAR)**, handheld farm runs **(ZED2i RGB-D, Alvium NIR, IMU)**, and **Insta360 360°** context—delivered with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter. <!--- think>
 
 ## 1) Project Overview
 - **Data Sources**
   - **Synthetic (Unreal Engine + AirSim)**: RGB, **Depth**, **Semantic Segmentation**, **IMU**, ground-truth pose; 3×5 connected-greenhouse map; 10 canonical routes (loop, straight pass, zig-zag, in/out).
-  - **Real: Insta360 X3 (360°)**: 360° RGB images & videos (equirectangular) from indoor/outdoor traversals around greenhouse structures; used for environment context and sim-to-real qualitative checks.
   - **Real: Handheld system (Farm runs)**: **ZED2i RGB-D** (stereo depth), **Alvium 1800 U-501 NIR** (near-infrared), **FLIR Lepton LWIR** (capable but **not captured in this release**), onboard compute: **Jetson Nano NX** companion computer; plus IMU logging.
 
 - **Intended Tasks**
@@ -18,8 +17,7 @@
 
 > **Modalities at a glance**
 > - **Synthetic:** RGB, Depth, Segmentation, IMU, Pose  
-> - **Insta360 X3:** 360° RGB (equirectangular)  
-> - **Handheld:** RGB-D (ZED2i), NIR (Alvium 1800 U-501), [LWIR capability], IMU
+> - **Handheld:** RGB-D (ZED2i), NIR (Alvium 1800 U-501), IMU
 
 ## Part A — Synthetic Dataset
 
@@ -27,8 +25,8 @@
 *Engine & Sim:* Unreal Engine + AirSim with a 3×5 connected-greenhouse map, dynamic lights, wind, and clutter.
 
 > **Visuals: Greenhouse Setup**
-<table>
-  <tr>
+<table align="center">
+  <tr align="center">
     <td align="center">
       <img src="docs/media/Greenhouse_setup_front.png" width="360"><br>
       <em>Front view</em>
@@ -43,10 +41,10 @@
 
 > **Demo Video**  
 <p align="center">
-  <img src="docs/media/Greenhouse_visual.gif" alt="Demo GIF" width="60%">
+  <img src="docs/media/Greenhouse_visual.gif" alt="Demo GIF" width="80%">
 </p>
 <p align="center">
-  <a href="docs/media/Greenhouse_visual.webm">Watch full MP4</a>
+  <a href="docs/media/Greenhouse_visual.mp4">Watch full MP4</a>
 </p>
 
 ### A.2 Canonical Routes (10)
@@ -77,12 +75,12 @@ Our per-frame filenames use **timestamp-based** (e.g., `1753292383498990645`) id
 ```swift
 AgriNav-Sim2Real/data/synthetic/routes/
 ├── route01_left/
-│ ├── rgb/ # 1753292383498990645.png, ...
-│ ├── depth/ # 1753292383498990645.pfm, ...
-│ ├── semantic_mask/ # 1753292383498990645.png (uint8 class IDs)
-│ ├── lidar/ # 1753292383498990645.asc (ASCII; x y z [intensity])
-│ ├── imu.csv # timestamped IMU
-│ ├── gps.csv # timestamped GPS
+│ ├── rgb/                       # 1753292383498990645.png, ...
+│ ├── depth/                     # 1753292383498990645.pfm, ...
+│ ├── semantic_mask/             # 1753292383498990645.png (uint8 class IDs)
+│ ├── lidar/                     # 1753292383498990645.asc (ASCII; x y z [intensity])
+│ ├── imu.csv                    # timestamped IMU
+│ ├── gps.csv                    # timestamped GPS
 ├── route02/
 └── route10/
 ```
@@ -163,27 +161,32 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 - **Notes:** Not all modalities may be present in every session; see per-session folders and `notes.md` for specifics.
 
 >**Visuals:**
-<table>
+<table align="center">
   <tr>
     <td align="center"><br>
-      <img alt="Farm overview (left)" src="docs/media/Farm_1.jpg" width="180"/><br>
+      <img alt="Farm overview (left)" src="docs/media/Farm_Left.jpg" width="180"/><br>
       <em>Farm overview (left)</em>
     </td>
     <td aligh="center"><br>
-      <img alt="Farm overview (right)" src="docs/media/Farm_2.jpg" width="180"/><br>
+      <img alt="Farm overview (center)" src="docs/media/Farm_Middle.jpg" width="180"/><br>
       <em>Farm overview (center)</em>
     </td>
     </td>
     <td aligh="center"><br>
-      <img alt="Farm overview (right)" src="docs/media/Farm_3.jpg" width="180"/><br>
+      <img alt="Farm overview (right)" src="docs/media/Farm_Right.jpg" width="180"/><br>
       <em>Farm overview (right)</em>
     </td>
   </tr>
 </table>
+<p align="center">
+  <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704">
+    Watch 360° view of the farm
+  </a>
+</p>
 
 > **Demo Video**  
 <p align="center">
-  <img src="docs/media/insta_visual_cut.gif" alt="Demo GIF" width="40%">
+  <img src="docs/media/insta_visual_cut.gif" alt="Demo GIF" width="80%">
 </p>
 <p align="center">
   <a href="https://ucla.app.box.com/file/1952972039846">Watch full MP4</a>
@@ -197,19 +200,19 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 
 ```swift
 AgriNav-Sim2Real/data/real/
-├── Temps/ # overview photos of the farm/site
+├── Temps/                       # overview photos of the farm/site
 │ ├── Farm_1.jpg
 │ ├── Farm_2.jpg
 │ └── Farm_*.jpg
-├── Insta360/ # 360° context: walk-throughs (enter/exit tunnel)
-│ ├── Videos/ # original .insv/.mp4 from Insta360 X3
+├── Insta360/                    # 360° context: walk-throughs (enter/exit tunnel)
+│ ├── Videos/                    # original .insv/.mp4 from Insta360 X3
 │ │ └── VID_20250807_103618_10_068_02_07.mov
-│ │ ├── frames/ # extracted frames
-└── Driscoll_farm/ # primary multi-sensor farm data
-│ ├── rgb/ # *.png (e.g., <timestamp>.png)
-│ ├── depth/ # *.png (16-bit or 32-bit; see note below)
-│ ├── nir/ # *.png (Alvium 1800 U-501)
-│ ├── imu.csv # time-series IMU (see schema)
+│ │ ├── frames/                  # extracted frames
+└── Driscoll_farm/               # primary multi-sensor farm data
+│ ├── rgb/                       # *.png (e.g., <timestamp>.png)
+│ ├── depth/                     # *.png (16-bit or 32-bit; see note below)
+│ ├── nir/                       # *.png (Alvium 1800 U-501)
+│ ├── imu.csv                    # time-series IMU (see schema)
 ```
 **What each part contains**
 - **`Temps/`**: overview stills of the site (for README and qualitative context).
@@ -218,43 +221,3 @@ AgriNav-Sim2Real/data/real/
 - **`Driscoll_farm/`**: the **primary research data**—per-session folders with **RGB**, **Depth**, **NIR**, and **IMU**.
 
 **IMU CSV schema (Driscoll_farm/***session***)**
-
-## 3) Data Schema & Conventions
-
-## 4) Splits & Recommended Tasks
-
-
-## 5) Quickstart
-#### 5.1 Install
-```swift
-conda create -n greenhouse python=3.10 -y
-conda activate greenhouse
-pip install -r requirements.txt
-```
-
-
-## 6) Known Limitations
-- Insta360 de-warping introduces edge distortion; prefer central FOV crops for control.
-- Synthetic greenhouse textures may not match specific farms; use domain randomization configs in data/synthetic/scenes/.
-
-## License & Usage
-Data: CC BY-4.0 (see LICENSE_DATA) unless otherwise noted by site owners.
-
-Code: 
-
-Attribution: please cite (below) and credit the farm partners when using real_farm subsets.
-
-## Citation
-@misc{AgriNav-Sim2Real_2025,
-  title  = {},
-  author = {},
-  year   = {2025},
-  note   = {Dataset},
-  url    = {https://github.com/EvelynZhu88/DroneNav_dataset.git}
-}
-
-## Changelog
-v0.1: Initial public draft (synthetic + sample Insta360 + sample farm sequences; loaders & baseline scripts).
-
-## Acknowledgments
-Thanks to collaborators and farm partners for access and feedback.
