@@ -236,7 +236,6 @@ pip install -r requirements.txt
 ## 6) Known Limitations
 - Insta360 de-warping introduces edge distortion; prefer central FOV crops for control.
 - Synthetic greenhouse textures may not match specific farms; use domain randomization configs in data/synthetic/scenes/.
-- Real farm IMU/GPS may be missing or intermittent; align using cross-correlation on visual odometry when possible.
 
 ## License & Usage
 Data: CC BY-4.0 (see LICENSE_DATA) unless otherwise noted by site owners.
