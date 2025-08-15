@@ -4,7 +4,7 @@
 
 ## 1) Dataset Overview 
 
-You can download our dataset from <span style='font-size:25px;'>&#128073;</span> <a href="https://ucla.box.com/s/be2bwg0l6qg6p8mcfbr48e7u5yatfk5y">here</a>.
+<a href="https://ucla.box.com/s/be2bwg0l6qg6p8mcfbr48e7u5yatfk5y">📥 Download our dataset here </a>.
 
 - **Data Sources**
   - **Synthetic (Unreal Engine + AirSim)**: RGB, **Depth**, **Semantic Segmentation**, **IMU**, ground-truth pose; 3×5 connected-greenhouse map; 10 canonical routes (loop, straight pass, zig-zag, in/out).
