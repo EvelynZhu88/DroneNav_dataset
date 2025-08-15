@@ -2,7 +2,7 @@
 
 > **TL;DR:** Sim-to-real greenhouse navigation dataset: Unreal/AirSim (RGB, depth, segmentation, IMU, GPS, LiDAR) + handheld farm runs (ZED2i RGB-D, Alvium NIR, IMU). Comes with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter.
 
-## 1) Dataset Overview 🍇
+## 1) Dataset Overview 
 
 You can download our dataset from <span style='font-size:25px;'>&#128073;</span> <a href="https://ucla.box.com/s/be2bwg0l6qg6p8mcfbr48e7u5yatfk5y">here</a>.
 
@@ -10,7 +10,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
   - **Synthetic (Unreal Engine + AirSim)**: RGB, **Depth**, **Semantic Segmentation**, **IMU**, ground-truth pose; 3×5 connected-greenhouse map; 10 canonical routes (loop, straight pass, zig-zag, in/out).
   - **Real: Handheld system (Farm runs)**: **ZED2i RGB-D** (stereo depth), **Alvium 1800 U-501 NIR** (near-infrared), **FLIR Lepton LWIR** (capable but **not captured in this release**), onboard compute: **Jetson Nano NX** companion computer; plus IMU logging.
 
-- **Intended Tasks 🌟**
+- **Intended Tasks**
   - Navigation & obstacle avoidance (RGB / RGB-D + IMU).
   - Depth estimation & semantic segmentation (synthetic GT).
   - Cross-modal fusion (RGB + NIR; RGB-D) and domain adaptation.
@@ -22,7 +22,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
 > - **Synthetic:** RGB, Depth, Segmentation, IMU, Pose  
 > - **Handheld:** RGB-D (ZED2i), NIR (Alvium 1800 U-501), IMU
 
-## Part A — Synthetic Dataset 🍓
+## Part A — Synthetic Dataset 
 
 ### A.1 Environment Overview
 *Engine & Sim:* Unreal Engine + AirSim with a 3×5 connected-greenhouse map, dynamic lights, wind, and clutter.
@@ -50,7 +50,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
   <a href="docs/media/Greenhouse_visual.mp4">Watch full MP4</a>
 </p>
 
-### A.2 Canonical Routes (10) 📍
+### A.2 Canonical Routes (10) 
 Each synthetic sequence belongs to one of **Route #1 … Route #10**; these labels map to the `<route>` level in the folder tree.
 
 <table align="center">
@@ -108,7 +108,7 @@ All routes were captured with the same AirSim settings (stored at `data/syntheti
 **AirSim settings file:** 
 See the exact configuration in `data/synthetic/scenes/default/airsim_settings.json`.
 
-### A.4 Camera intrinsics (Synthetic, summary) 🚧
+### A.4 Camera intrinsics (Synthetic, summary) 
 
 - Capture: `W=960`, `H=540`, `HFOV=90°` → pinhole intrinsics (px):
   - `fx=480.0`, `fy=480.0`, `cx=480.0`, `cy=270.0`
@@ -145,9 +145,9 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 
 </details>
 
-## Part B — Real Dataset 🍇
+## Part B — Real Dataset 
 
-### B.1 Overview 🌾
+### B.1 Overview 
 - **Site:** Driscoll's Farm <!-- check if need to add address after the meeting-->
 - **Capture rigs (primary):**
   - **ZED2i RGB-D** (stereo) + **IMU**
@@ -191,7 +191,7 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 </p>
 
 
-### B.2 Folder Contents (Real) 🌱
+### B.2 Folder Contents (Real)
 - `real_insta360/raw/` original `.insv/.mp4` + device metadata.
 - `real_insta360/extracted/<site>/<session>/` de-warped views and `meta.json`, optional `gps_imu.csv`.
 - `real_farm/<site>/<session>/` forward RGB (±Depth/IMU), `calib/`, and `notes.md`.
