@@ -28,11 +28,11 @@
 <table align="center">
   <tr align="center">
     <td align="center">
-      <img src="docs/media/Greenhouse_setup_front.png" width="360"><br>
+      <img src="docs/media/Greenhouse_setup_front.png" width="600"><br>
       <em>Front view</em>
     </td>
     <td align="center">
-      <img src="docs/media/Greenhouse_setup_side.png" width="360"><br>
+      <img src="docs/media/Greenhouse_setup_side.png" width="530"><br>
       <em>Side view</em>
     </td>
   </tr>
@@ -54,7 +54,7 @@ Each synthetic sequence belongs to one of **Route #1 … Route #10**; these labe
   <tr>
     <td align="center">
       Route #1-10<br>
-      <img alt="Route Plan" src="docs/media/Route_Plan.png" width="80%"/>
+      <img alt="Route Plan" src="docs/media/Route_Plan.png" width="90%"/>
     </td>
   </tr>
 </table>
@@ -158,18 +158,18 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 
 >**Visuals:**
 <table align="center">
-  <tr>
+  <tr align="center">
     <td align="center"><br>
-      <img alt="Farm overview (left)" src="docs/media/Farm_Left.jpg" width="180"/><br>
+      <img alt="Farm overview (left)" src="docs/media/Farm_Left.jpg" width="480"/><br>
       <em>Farm overview (left)</em>
     </td>
     <td aligh="center"><br>
-      <img alt="Farm overview (center)" src="docs/media/Farm_Middle.jpg" width="180"/><br>
+      <img alt="Farm overview (center)" src="docs/media/Farm_Middle.jpg" width="480"/><br>
       <em>Farm overview (center)</em>
     </td>
     </td>
     <td aligh="center"><br>
-      <img alt="Farm overview (right)" src="docs/media/Farm_Right.jpg" width="180"/><br>
+      <img alt="Farm overview (right)" src="docs/media/Farm_Right.jpg" width="480"/><br>
       <em>Farm overview (right)</em>
     </td>
   </tr>
