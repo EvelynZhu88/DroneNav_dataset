@@ -175,6 +175,19 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
       <img alt="Farm overview (right)" src="docs/media/Farm_Right.jpg" width="480"/><br>
       <em>Farm overview (right)</em>
     </td>
+    <br>
+    <td aligh="center"><br>
+    <img alt="Crop overview (strawberries)" src="docs/media/farm_strawberries"480"/><br>
+    <em>Crop overview (strawberries)</em>
+    </td>
+    <td aligh="center"><br>
+    <img alt="Crop overview (blueberries)" src="docs/media/farm_blueberries"480"/><br>
+    <em>Crop overview (blueberries)</em>
+    </td>
+    <td aligh="center"><br>
+    <img alt="Crop overview (blackberries)" src="docs/media/farm_blackberries"480"/><br>
+    <em>Crop overview (blackberries)</em>
+    </td> 
   </tr>
 </table>
 <p align="center">
