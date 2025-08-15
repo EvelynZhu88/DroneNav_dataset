@@ -148,8 +148,8 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 
 ## Part B — Real Dataset 🍇
 
-### B.1 Overview 
-- **Site:** Driscoll's Farm 🌾<!-- check if need to add address after the meeting-->
+### B.1 Overview 🌾
+- **Site:** Driscoll's Farm <!-- check if need to add address after the meeting-->
 - **Capture rigs (primary):**
   - **ZED2i RGB-D** (stereo) + **IMU**
   - **Alvium 1800 U-501** **NIR**
