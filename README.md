@@ -2,7 +2,7 @@
 
 > **TL;DR:** Sim-to-real greenhouse navigation dataset: Unreal/AirSim (RGB, depth, segmentation, IMU, GPS, LiDAR) + handheld farm runs (ZED2i RGB-D, Alvium NIR, IMU). Comes with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter.
 
-## 1) Dataset Overview
+## 1) Dataset Overview 🍇
 
 You can download our dataset from <span style='font-size:25px;'>&#128073;</span> <a href="https://ucla.box.com/s/be2bwg0l6qg6p8mcfbr48e7u5yatfk5y">here</a>.
 
@@ -22,7 +22,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
 > - **Synthetic:** RGB, Depth, Segmentation, IMU, Pose  
 > - **Handheld:** RGB-D (ZED2i), NIR (Alvium 1800 U-501), IMU
 
-## Part A — Synthetic Dataset
+## Part A — Synthetic Dataset 🍓
 
 ### A.1 Environment Overview
 *Engine & Sim:* Unreal Engine + AirSim with a 3×5 connected-greenhouse map, dynamic lights, wind, and clutter.
@@ -50,7 +50,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
   <a href="docs/media/Greenhouse_visual.mp4">Watch full MP4</a>
 </p>
 
-### A.2 Canonical Routes (10)
+### A.2 Canonical Routes (10) 📍
 Each synthetic sequence belongs to one of **Route #1 … Route #10**; these labels map to the `<route>` level in the folder tree.
 
 <table align="center">
@@ -146,7 +146,7 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 
 </details>
 
-## Part B — Real Dataset
+## Part B — Real Dataset 🍇
 
 ### B.1 Overview
 - **Site:** Driscoll's Farm <!-- check if need to add address after the meeting-->
