@@ -55,8 +55,7 @@ Each synthetic sequence belongs to one of **Route #1 … Route #10**; these labe
 
 <table align="center">
   <tr>
-    <td align="center">
-      Route #1-10<br>
+    <td align="center"><br>
       <img alt="Route Plan" src="docs/media/Route_Plan.png" width="90%"/>
     </td>
   </tr>
