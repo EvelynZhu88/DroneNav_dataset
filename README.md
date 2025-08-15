@@ -21,6 +21,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
 > **Modalities at a glance**
 > - **Synthetic:** RGB, Depth, Segmentation, IMU, Pose  
 > - **Handheld:** RGB-D (ZED2i), NIR (Alvium 1800 U-501), IMU
+> - **Crops/Context tags** 🍓 Strawberry · 🫐 blueberry · 🍇 grape· :herb: canopy · :ear_of_rice: row-crop
 
 ## Part A — Synthetic Dataset 
 
@@ -47,7 +48,7 @@ You can download our dataset from <span style='font-size:25px;'>&#128073;</span>
   <img src="docs/media/Greenhouse_visual.gif" alt="Demo GIF" width="80%">
 </p>
 <p align="center">
-  <a href="docs/media/Greenhouse_visual.mp4">Watch full MP4</a>
+  <a href="docs/media/Greenhouse_visual.mp4">🎥 Watch full MP4</a>
 </p>
 
 ### A.2 Canonical Routes (10) 
@@ -178,7 +179,7 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
 </table>
 <p align="center">
   <a href="https://cloud-va.insta360.com/share/va/2a8h819p6D9s2U7k1172661248/player?mediaId=288041035899080704">
-    Watch 360° view of the farm
+    🎥 Watch 360° view of the farm
   </a>
 </p>
 
@@ -187,7 +188,7 @@ With f_x=480, W_{\text{m}}=1.0, Z_{\text{m}}=2.0:
   <img src="docs/media/insta_visual_cut.gif" alt="Demo GIF" width="80%">
 </p>
 <p align="center">
-  <a href="https://ucla.app.box.com/file/1952972039846">Watch full MP4</a>
+  <a href="https://ucla.app.box.com/file/1952972039846">🎥 Watch full MP4</a>
 </p>
 
 
