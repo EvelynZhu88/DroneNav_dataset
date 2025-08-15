@@ -1,6 +1,6 @@
 # AgriNav-Sim2Real: A Multi-Sensor Dataset for Drone/UGV Navigation in Greenhouses (Synthetic + Real)
 
-> **TL;DR:** Sim-to-real greenhouse navigation dataset spanning Unreal/AirSim **(RGB · Depth · Seg · IMU · GPS · LiDAR)**, handheld farm runs **(ZED2i RGB-D, Alvium NIR, IMU)**, and **Insta360 360°** context—delivered with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter. <!--- think>
+> **TL;DR:** Sim-to-real greenhouse navigation dataset: Unreal/AirSim (RGB, depth, segmentation, IMU, GPS, LiDAR) + handheld farm runs (ZED2i RGB-D, Alvium NIR, IMU). Comes with a consistent folder layout, lightweight metadata, and starter loaders/baselines for perception-to-control under canopy/clutter.
 
 ## 1) Project Overview
 - **Data Sources**
@@ -50,15 +50,11 @@
 ### A.2 Canonical Routes (10)
 Each synthetic sequence belongs to one of **Route #1 … Route #10**; these labels map to the `<route>` level in the folder tree.
 
-<table>
+<table align="center">
   <tr>
     <td align="center">
-      Route #1-8<br>
-      <img alt="Route 1 to Route 8" src="docs/media/routes_overview_1-8.jpg" width="180"/>
-    </td>
-    <td align="center">
-      Route #9-10<br>
-      <img alt="Route 9 and Route 10" src="docs/media/routes_overview_9-10.jpg" width="180"/>
+      Route #1-10<br>
+      <img alt="Route Plan" src="docs/media/Route_Plan.png" width="80%"/>
     </td>
   </tr>
 </table>
